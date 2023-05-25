@@ -1,12 +1,12 @@
-const BaseJoi = require('joi');
-const sanitizeHtml = require('sanitize-html');
+const BaseJoi = require("joi");
+const sanitizeHtml = require("sanitize-html");
 
 // customize extention to validate the entered HTMl
 const extension = (joi) => ({
-    type: 'string',
+    type: "string",
     base: joi.string(),
     messages: {
-        'string.escapeHTML': '{{#label}} must not include HTML!'
+        "string.escapeHTML": "{{#label}} must not include HTML!",
     },
     rules: {
         escapeHTML: {
@@ -15,21 +15,27 @@ const extension = (joi) => ({
                     allowedTags: [],
                     allowedAttributes: {},
                 });
-                if (clean !== value) return helpers.error('string.escapeHTML', { value })
+                if (clean !== value)
+                    return helpers.error("string.escapeHTML", { value });
                 return clean;
-            }
-        }
-    }
+            },
+        },
+    },
 });
 
 const Joi = BaseJoi.extend(extension);
-
+const reviewSchema = Joi.object({
+    review: Joi.object({
+        body: Joi.string().required().escapeHTML(),
+        rating: Joi.number().required().min(1).max(5),
+    }).required(),
+});
 const userSchema = Joi.object({
-  user: Joi.object({
-    email: Joi.string().required().escapeHTML(),
-    username: Joi.string().required().escapeHTML(),
-    password: Joi.string().required().escapeHTML(),
-  }).required(),
+    user: Joi.object({
+        email: Joi.string().required().escapeHTML(),
+        username: Joi.string().required().escapeHTML(),
+        password: Joi.string().required().escapeHTML(),
+    }).required(),
 });
 
-module.exports = {  userSchema };
+module.exports = { reviewSchema, userSchema };
