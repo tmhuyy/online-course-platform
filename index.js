@@ -13,6 +13,7 @@ const MongoStore = require("connect-mongo");
 const engine = require("ejs-mate");
 const path = require("path");
 const bodyParser = require("body-parser");
+const AdminJSExpress = require("@adminjs/express");
 
 // const AppError = require("./utils/AppError");
 
