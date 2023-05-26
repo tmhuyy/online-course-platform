@@ -1,0 +1,10 @@
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #6440FB;
+    border-color: #6440FB;
+    color: white;
+    font-weight: 700;
+}

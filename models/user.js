@@ -17,6 +17,17 @@ const UserSchema = new Schema({
         required: true,
         unique: true,
     },
+    money: {
+        type: Number,
+        default: 150
+    },
+    courses: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Course",
+            required: true,
+        },
+    ]
 });
 
 UserSchema.statics.findAndValidate = async function (username, password) {
