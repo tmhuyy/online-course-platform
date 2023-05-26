@@ -1,0 +1,158 @@
+<% layout('layouts/boilerplate')%>
+<div class="content-wrapper js-content-wrapper">
+    <section data-anim="fade" class="breadcrumbs">
+        <div class="container mt-10">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="breadcrumbs__content">
+                        <div class="breadcrumbs__item">
+                            <a href="/">Home</a>
+                        </div>
+                        <% if (currentPath === "/courses/type") { %>
+                        <div class="breadcrumbs__item">
+                            <a href="<%=currentPath%>">All courses</a>
+                        </div>
+                        <% } else {%>
+                        <div class="breadcrumbs__item">
+                            <a href="/courses/type">All Courses</a>
+                        </div>
+                        <div class="breadcrumbs__item">
+                            <a href="<%=currentPath%>"
+                                >All <%=upperCatergory%> Courses</a
+                            >
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-header -type-1">
+        <div class="container">
+            <div class="page-header__content">
+                <div class="row">
+                    <div class="col-auto">
+                        <div data-anim="slide-up delay-1">
+                            <h1 class="page-header__title">
+                                <% if (currentPath === "/courses/type") { %>
+                                    All Avaiblable Courses
+                                <% }  else {%>
+                                    All Avaiblable <%=upperCatergory%> Courses
+                                <% }  %>                            
+                            </h1>
+                        </div>
+
+                        <div data-anim="slide-up delay-2">
+                            <p class="page-header__text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="layout-pt-md layout-pb-lg">
+        <div data-anim-wrap class="container">
+            <div class="row y-gap-30">
+                <% for( let index = 0; index < courses.length; index++ ) { %>
+                <div
+                    data-anim-child="slide-up delay-<%=index+1%>"
+                    class="col-lg-4 col-md-6"
+                >
+                    <a href="courses-single-1.html" class="coursesCard -type-1">
+                        <div class="relative">
+                            <div
+                                class="coursesCard__image overflow-hidden rounded-8"
+                            >
+                                <img
+                                    class="w-1/1"
+                                    src="/img/coursesCards/1.png"
+                                    alt="image"
+                                />
+                                <div
+                                    class="coursesCard__image_overlay rounded-8"
+                                ></div>
+                            </div>
+                            <div
+                                class="d-flex justify-between py-10 px-10 absolute-full-center z-3"
+                            ></div>
+                        </div>
+
+                        <div class="h-100 pt-15">
+                            <div class="d-flex items-center">
+                                <div class="text-14 lh-1 text-yellow-1 mr-10">
+                                    <%=courses[index].users.length%> Student(s)
+                                </div>
+                            </div>
+
+                            <div class="text-17 lh-15 fw-500 text-dark-1 mt-10">
+                                <%=courses[index].name%>
+                            </div>
+
+                            <div class="d-flex x-gap-10 items-center pt-10">
+                                <div class="d-flex items-center">
+                                    <div class="mr-8">
+                                        <img
+                                            src="/img/coursesCards/icons/1.svg"
+                                            alt="icon"
+                                        />
+                                    </div>
+                                    <div class="text-14 lh-1">
+                                        <%=courses[index].catergory%>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex items-center">
+                                    <div class="mr-8">
+                                        <img
+                                            src="/img/coursesCards/icons/2.svg"
+                                            alt="icon"
+                                        />
+                                    </div>
+                                    <div class="text-14 lh-1">3h 56m</div>
+                                </div>
+
+                                <div class="d-flex items-center">
+                                    <div class="mr-8">
+                                        <img
+                                            src="/img/coursesCards/icons/3.svg"
+                                            alt="icon"
+                                        />
+                                    </div>
+                                    <div class="text-14 lh-1">
+                                        <%=courses[index].level%>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="coursesCard-footer">
+                                <div class="coursesCard-footer__author">
+                                    <img
+                                        src="/img/general/avatar-1.png"
+                                        alt="image"
+                                    />
+                                    <div>Eduboard</div>
+                                </div>
+
+                                <div class="coursesCard-footer__price">
+                                    <div>$100</div>
+                                    <div>$<%=courses[index].price%></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+            </div>
+
+            <div class="row justify-center pt-90 lg:pt-50">
+                <div class="col-auto">
+                    <div class="pagination -buttons">
+                        <div class="pagination__count">
+                            <a class="-count-is-active">1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

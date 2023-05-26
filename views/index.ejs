@@ -38,9 +38,9 @@
                             <div class="">
                                 <a
                                     data-barba
-                                    href="courses-list-1.html"
+                                    href="/courses/type"
                                     class="button -md -outline-green-1 text-green-1"
-                                    >Find Courses</a
+                                    >Find All Courses</a
                                 >
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                     />
                                 </div>
                                 <div class="masthead-info__title lh-1">
-                                    Over [count] students
+                                    Over <%=users.length%> students
                                 </div>
                             </div>
 
@@ -72,7 +72,7 @@
                                     />
                                 </div>
                                 <div class="masthead-info__title lh-1">
-                                    More than [count] courses
+                                    More than <%=courses.length%> courses
                                 </div>
                             </div>
 
@@ -301,45 +301,6 @@
                         </button>
                     </div>
 
-                    <!-- <div>
-                        <button
-                            class="tabs__button px-15 py-8 rounded-8 js-tabs-button"
-                            data-tab-target=".-tab-item-2"
-                            type="button"
-                        >
-                            Development
-                        </button>
-                    </div>
-
-                    <div>
-                        <button
-                            class="tabs__button px-15 py-8 rounded-8 js-tabs-button"
-                            data-tab-target=".-tab-item-3"
-                            type="button"
-                        >
-                            Marketing
-                        </button>
-                    </div>
-
-                    <div>
-                        <button
-                            class="tabs__button px-15 py-8 rounded-8 js-tabs-button"
-                            data-tab-target=".-tab-item-4"
-                            type="button"
-                        >
-                            Design
-                        </button>
-                    </div>
-
-                    <div>
-                        <button
-                            class="tabs__button px-15 py-8 rounded-8 js-tabs-button"
-                            data-tab-target=".-tab-item-5"
-                            type="button"
-                        >
-                            Business
-                        </button>
-                    </div> -->
 
                     
                 </div>
@@ -347,6 +308,8 @@
                 <div class="tabs__content pt-60 js-tabs-content">
                     <div class="tabs__pane -tab-item-1 is-active">
                         <div class="row y-gap-30 justify-center">
+                            <% for( let course of courses ) { %>
+
                             <div class="col-lg-3 col-md-6">
                                 <div data-anim-child="slide-up delay-1">
                                     <a
@@ -376,36 +339,18 @@
                                                 <div
                                                     class="text-14 lh-1 text-yellow-1 mr-10"
                                                 >
-                                                    4.5
+                                                <%=course.users.length%> Student(s)
                                                 </div>
-                                                <div
-                                                    class="d-flex x-gap-5 items-center"
-                                                >
-                                                    <div
-                                                        class="icon-star text-9 text-yellow-1"
-                                                    ></div>
-                                                    <div
-                                                        class="icon-star text-9 text-yellow-1"
-                                                    ></div>
-                                                    <div
-                                                        class="icon-star text-9 text-yellow-1"
-                                                    ></div>
-                                                    <div
-                                                        class="icon-star text-9 text-yellow-1"
-                                                    ></div>
-                                                    <div
-                                                        class="icon-star text-9 text-yellow-1"
-                                                    ></div>
-                                                </div>
-                                                <div class="text-13 lh-1 ml-10">
-                                                    (1991)
-                                                </div>
+                                                
+                                                <!-- <div class="text-13 text-yellow-1 lh-1 ml-10">
+                                                    
+                                                </div> -->
                                             </div>
 
                                             <div
                                                 class="text-17 lh-15 fw-500 text-dark-1 mt-10"
                                             >
-                                               [Dynamic name]
+                                               <%=course.name%>
                                             </div>
 
                                             <div
@@ -421,7 +366,7 @@
                                                         />
                                                     </div>
                                                     <div class="text-14 lh-1">
-                                                        6 lesson
+                                                        <%=course.catergory%>
                                                     </div>
                                                 </div>
 
@@ -449,7 +394,7 @@
                                                         />
                                                     </div>
                                                     <div class="text-14 lh-1">
-                                                        [dynamical level]
+                                                        <%=course.level%>
                                                     </div>
                                                 </div>
                                             </div>
@@ -469,7 +414,7 @@
                                                     class="coursesCard-footer__price"
                                                 >
                                                     <div>$100</div>
-                                                    <div>$[dynamic value]</div>
+                                                    <div>$<%=course.price%></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -477,7 +422,7 @@
                                 </div>
                             </div>
 
-                            
+                            <%}%>
 
                             <!-- <div class="col-lg-3 col-md-6">
                                 <div data-anim-child="slide-up delay-3">

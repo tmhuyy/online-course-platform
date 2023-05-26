@@ -29,8 +29,8 @@
         />
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/vendors.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="/css/vendors.css" />
+        <link rel="stylesheet" href="/css/main.css" />
         <link rel="stylesheet" href="/css/scrollToTop.css" />
 
         <script
@@ -44,10 +44,8 @@
         <div class="preloader js-preloader">
             <div class="preloader__bg"></div>
         </div>
-        <%- include("../partials/navbar")%>
-        <main class="main-content">
-            <%- body %>
-        </main>
+        <%-include("../partials/navbar")%>
+        <main class="main-content"><%- body %></main>
         <button
             type="button"
             class="btn btn-info btn-floating btn-lg"
@@ -55,17 +53,18 @@
         >
             ^
         </button>
-        <%- include("../partials/footer")%>
+        <%-include("../partials/footer")%>
 
         <!-- validation client-side for form -->
+        <!--  -->
         <script src="/js/validate.js"></script>
         <script src="/js/scrollToTop.js"></script>
         <script
             src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""
-        ></script>
-        <script src="js/vendors.js"></script>
-        <script src="js/main.js"></script>
+        ></script> 
+        <script src="/js/vendors.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
