@@ -34,11 +34,9 @@
                     <div class="col-auto">
                         <div data-anim="slide-up delay-1">
                             <h1 class="page-header__title">
-                                <% if (currentPath === "/courses/type") { %>
-                                    All Avaiblable Courses
-                                <% }  else {%>
-                                    All Avaiblable <%=upperCatergory%> Courses
-                                <% }  %>                            
+                                <% if (currentPath === "/courses/type") { %> All
+                                Courses <% } else {%> All
+                                <%=upperCatergory%> Courses <% } %>
                             </h1>
                         </div>
 
@@ -52,6 +50,35 @@
     </section>
     <section class="layout-pt-md layout-pb-lg">
         <div data-anim-wrap class="container">
+            <div data-anim="slide-up delay-1" class="accordion js-accordion">
+                <div class="accordion__item">
+                    <div
+                        class="row y-gap-20 items-center justify-between pb-30"
+                    >
+                        <div class="col-auto">
+                            <div class="text-14 lh-12">
+                                Showing
+                                <span class="text-dark-1 fw-500"><%=courses.length%></span>
+                                total results
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="row x-gap-20 y-gap-20">
+                                <div class="col-auto">
+                                    <div class="d-flex items-center"></div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div
+                                        class="accordion__button w-unset"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row y-gap-30">
                 <% for( let index = 0; index < courses.length; index++ ) { %>
                 <div
@@ -142,16 +169,6 @@
                     </a>
                 </div>
                 <% } %>
-            </div>
-
-            <div class="row justify-center pt-90 lg:pt-50">
-                <div class="col-auto">
-                    <div class="pagination -buttons">
-                        <div class="pagination__count">
-                            <a class="-count-is-active">1</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

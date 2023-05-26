@@ -45,7 +45,10 @@
             <div class="preloader__bg"></div>
         </div>
         <%-include("../partials/navbar")%>
-        <main class="main-content"><%- body %></main>
+        <main class="main-content">
+            <%- include("../partials/flash") %>
+            <%- body %>
+        </main>
         <button
             type="button"
             class="btn btn-info btn-floating btn-lg"
@@ -63,7 +66,7 @@
             src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""
-        ></script> 
+        ></script>
         <script src="/js/vendors.js"></script>
         <script src="/js/main.js"></script>
     </body>

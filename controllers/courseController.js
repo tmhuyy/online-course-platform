@@ -14,3 +14,7 @@ module.exports.renderCourseList = async (req, res) => {
     const courses = await Course.find({ catergory: upperCatergory });
     res.render("course/courseList", { courses, currentPath: req.originalUrl, upperCatergory});
 };
+
+module.exports.renderMyCourseList = async (req, res) => {
+    res.send(req.user)
+}

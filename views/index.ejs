@@ -28,12 +28,15 @@
                             class="masthead__buttons row x-gap-10 y-gap-10"
                         >
                             <div class="">
-                                <a
+                                <% if (!user) { %>
+                                    <a
                                     data-barba
-                                    href="signup.html"
+                                    href="/register"
                                     class="button -md -purple-1 text-white"
                                     >Sign Up For Free</a
                                 >
+                                <% } %>
+                                
                             </div>
                             <div class="">
                                 <a

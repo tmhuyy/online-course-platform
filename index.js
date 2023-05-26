@@ -18,12 +18,8 @@ const app = express();
 const Admin = require("./models/admin");
 const User = require("./models/user");
 const Course = require("./models/course");
-
-const courseRoutues = require("./routes/courseRoutes");
-
 const configAdminJs = require("./configAdminJs");
 const AdminJSExpress = require("@adminjs/express");
-const UserResource = require("./configAdminResource/UserResource");
 const router = AdminJSExpress.buildAuthenticatedRouter(
     configAdminJs,
     {
@@ -45,6 +41,10 @@ const router = AdminJSExpress.buildAuthenticatedRouter(
         saveUninitialized: true,
     }
 );
+app.use(configAdminJs.options.rootPath, router);
+
+const courseRoutues = require("./routes/courseRoutes");
+const userRoutes = require("./routes/userRoutes")
 app.engine("ejs", engine);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -55,7 +55,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(configAdminJs.options.rootPath, router);
 const mongoDB = process.env.DB_URL;
 mongoose
     .connect(mongoDB, {
@@ -96,7 +95,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/", courseRoutues);
-
+app.use("/", userRoutes)
 app.get("/", async (req, res) => {
     const courses = await Course.find();
     const users = await User.find()
