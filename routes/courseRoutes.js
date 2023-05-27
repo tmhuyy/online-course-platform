@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const isLoggedIn = require("../utils/isLoggedIn")
 const {
     renderCourseList,
     renderAllCourses,
@@ -10,7 +11,7 @@ const {
 
 router.get("/courses/type", renderAllCourses);
 router.get("/courses/type/:catergory", renderCourseList);
-router.get("/my-courses", renderMyCourseList);
+router.get("/my-courses", isLoggedIn, renderMyCourseList);
 router.get("/courses/:id", renderCourseSingle);
 router.get("/buy/:id", buyCourse);
 

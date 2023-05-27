@@ -23,7 +23,7 @@ module.exports.renderCourseSingle = async (req, res) => {
     const { id } = req.params;
     const {user} = req.session;
     const course = await Course.findById(id);
-    res.render("course/courseSingle", {course, isBought: user.courses.includes(id)})
+    res.render("course/courseSingle", {course, isBought: user?.courses.includes(id)})
 }
 
 module.exports.buyCourse = async (req, res) => {
