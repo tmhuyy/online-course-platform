@@ -14,6 +14,7 @@
 
 ## Endpoints
 > User end  point :
+>  - <code>GET</code> **/** - RENDER home page.
 >  - <code>GET</code> **/register** - RENDER register page.
 >  - <code>POST</code> **/register** - REGISTER new user.
 >  - <code>GET</code> **/login** - RENDER login page.
