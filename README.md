@@ -18,8 +18,8 @@
 >  - <code>GET</code> **/register** - RENDER register page.
 >  - <code>POST</code> **/register** - REGISTER new user.
 >  - <code>GET</code> **/login** - RENDER login page.
->  - <code>POST</code> **/login** - Login the student dashboard
->  - <code>POST</code> **/logout** - Logout the student dashboard.
+>  - <code>POST</code> **/login** - LOGIN the student dashboard
+>  - <code>POST</code> **/logout** - LOGOUT the student dashboard.
 >  - <code>GET</code> **/my-courses** - RENDER my courses page.
 >  - <code>GET</code> **/buy/:id** - BUY a particular course.
 >  - <code>GET</code> **/courses/type** - RENDER all courses page.
