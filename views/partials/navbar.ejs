@@ -14,7 +14,7 @@
                             href="/"
                             class="text-35 fw-600 text-white"
                         >
-                            Eduboard
+                        UILearn
                         </a>
                     </div>
 
@@ -701,7 +701,7 @@
                                 International University,<br />
                                 Thu Duc, Ho Chi Minh city.
                             </div>
-                            <div>eduboard@educate.com</div>
+                            <div>uiearn@educate.com</div>
                         </div>
 
                         <div class="mobile-socials mt-10">
@@ -780,8 +780,8 @@
                         >
 
                         <% } else { %>
-                        <p class="text-red fw-600 mr-30 text-20">
-                            Hello <%= user.username %>
+                        <p class="text-red fw-600 text-20">
+                            Hello <%= user.username %> - <p class="text-white fw-900 ml-10 mr-30 text-20">  <%= user.money %> IU Coins</p>
                         </p>
                         <form action="/logout" method="POST">
                             <button

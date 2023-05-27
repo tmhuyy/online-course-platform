@@ -1,0 +1,136 @@
+<% layout('layouts/boilerplate')%>
+<div class="content-wrapper js-content-wrapper">
+
+    <section class="layout-pt-md layout-pb-lg">
+        <div data-anim-wrap class="container mt-100">
+            <div data-anim="slide-up delay-1" class="accordion js-accordion">
+                <div class="accordion__item">
+                    <div
+                        class="row y-gap-20 items-center justify-between pb-30"
+                    >
+                        <div class="col-auto">
+                            <div class="text-14 lh-12">
+                                Showing
+                                <span class="text-dark-1 fw-500"><%=courses.length%></span>
+                                total result(s)
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="row x-gap-20 y-gap-20">
+                                <div class="col-auto">
+                                    <div class="d-flex items-center"></div>
+                                </div>
+
+                                <div class="col-auto">
+                                    <div
+                                        class="accordion__button w-unset"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row y-gap-30">
+                <% if (courses.length > 0) { %>
+                    <% for( let index = 0; index < courses.length; index++ ) { %>
+                        <div
+                            data-anim-child="slide-up delay-<%=index+1%>"
+                            class="col-lg-4 col-md-6"
+                        >
+                            <a href="/courses/<%=courses[index]._id%>" class="coursesCard -type-1">
+                                <div class="relative">
+                                    <div
+                                        class="coursesCard__image overflow-hidden rounded-8"
+                                    >
+                                        <img
+                                            class="w-1/1"
+                                            src="/img/coursesCards/1.png"
+                                            alt="image"
+                                        />
+                                        <div
+                                            class="coursesCard__image_overlay rounded-8"
+                                        ></div>
+                                    </div>
+                                    <div
+                                        class="d-flex justify-between py-10 px-10 absolute-full-center z-3"
+                                    ></div>
+                                </div>
+        
+                                <div class="h-100 pt-15">
+                                    <div class="d-flex items-center">
+                                        <div class="text-14 lh-1 text-yellow-1 mr-10">
+                                            <%=courses[index].users.length%> Student(s)
+                                        </div>
+                                    </div>
+        
+                                    <div class="text-17 lh-15 fw-500 text-dark-1 mt-10">
+                                        <%=courses[index].name%>
+                                    </div>
+        
+                                    <div class="d-flex x-gap-10 items-center pt-10">
+                                        <div class="d-flex items-center">
+                                            <div class="mr-8">
+                                                <img
+                                                    src="/img/coursesCards/icons/1.svg"
+                                                    alt="icon"
+                                                />
+                                            </div>
+                                            <div class="text-14 lh-1">
+                                                <%=courses[index].catergory%>
+                                            </div>
+                                        </div>
+        
+                                        <div class="d-flex items-center">
+                                            <div class="mr-8">
+                                                <img
+                                                    src="/img/coursesCards/icons/2.svg"
+                                                    alt="icon"
+                                                />
+                                            </div>
+                                            <div class="text-14 lh-1">3h 56m</div>
+                                        </div>
+        
+                                        <div class="d-flex items-center">
+                                            <div class="mr-8">
+                                                <img
+                                                    src="/img/coursesCards/icons/3.svg"
+                                                    alt="icon"
+                                                />
+                                            </div>
+                                            <div class="text-14 lh-1">
+                                                <%=courses[index].level%>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="coursesCard-footer">
+                                        <div class="coursesCard-footer__author">
+                                            <img
+                                                src="/img/general/avatar-1.png"
+                                                alt="image"
+                                            />
+                                            <div>UILearn</div>
+                                        </div>
+        
+                                        <div class="coursesCard-footer__price">
+                                            <div>$100</div>
+                                            <div>$<%=courses[index].price%></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                <% } else { %>
+                    <div data-anim="slide-up delay-1">
+                        <h2>You do not have any courses</h2>
+                        <a href="/courses/type" class="">Try to buy some courses</a>
+                    </div>
+                    
+                <%}%>
+            </div>
+        </div>
+    </section>
+</div>

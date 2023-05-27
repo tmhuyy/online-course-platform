@@ -95,9 +95,10 @@ app.use((req, res, next) => {
 });
 
 app.use("/", courseRoutues);
-app.use("/", userRoutes)
+app.use("/", userRoutes);
+
 app.get("/", async (req, res) => {
-    const courses = await Course.find();
+    const courses = await Course.find().sort({_id: -1})
     const users = await User.find()
     res.render("index", { courses, users });
 });

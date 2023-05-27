@@ -5,8 +5,9 @@ module.exports = {
         properties: {
             users: {
                 isVisible: {
-                    new: false,
-                    show: true
+                    new: true,
+                    show: true,
+                    edit: true
                 },
             },
             reviews: {

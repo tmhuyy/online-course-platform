@@ -1,1 +1,2071 @@
 <% layout('layouts/boilerplate') %>
+<div class="content-wrapper js-content-wrapper mt-50">
+    <section class="page-header -type-5 bg-dark-1">
+        <div class="page-header__bg">
+            <div
+                class="bg-image js-lazy"
+                data-bg="img/event-single/bg.png"
+            ></div>
+        </div>
+
+        <div class="container">
+            <div class="page-header__content pt-80 pb-90">
+                <div class="row y-gap-30 justify-between">
+                    <div class="col-xl-6 col-lg-6">
+                        <!-- catergory -->
+                        <div class="d-flex x-gap-15 y-gap-10 pb-20">
+                            <div>
+                                <div
+                                    class="badge px-15 py-8 text-11 bg-purple-1 text-white fw-400"
+                                >
+                                    <%=course.catergory%>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- name -->
+                        <div data-anim="slide-up delay-1">
+                            <h1 class="text-30 lh-14 text-white pr-60 lg:pr-0">
+                                <%=course.name%>
+                            </h1>
+                        </div>
+                        <!-- content -->
+                        <p class="text-dark-3 mt-20">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Asperiores, iste ullam voluptates vel,
+                            repudiandae officiis necessitatibus perspiciatis
+                            ipsam qui nobis at beatae debitis minus animi
+                            reiciendis, et adipisci hic obcaecati.
+                        </p>
+
+                        <div
+                            class="d-flex x-gap-30 y-gap-10 items-center flex-wrap pt-20"
+                        >
+                            <div class="d-flex items-center text-dark-3">
+                                <div class="icon icon-person-3 text-13"></div>
+                                <div class="text-14 ml-8">
+                                    <%=course.users.length%> enrolled on this
+                                    course
+                                </div>
+                            </div>
+
+                            <div class="d-flex items-center text-dark-3">
+                                <div class="icon icon-wall-clock text-13"></div>
+                                <div class="text-14 ml-8">
+                                    Last updated <%=Math.floor(Math.random() *
+                                    3) + 10; %>/<%=Math.floor(Math.random() * 6)
+                                    + 2017; %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-30">
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-video-file"></div>
+                                    <div class="ml-10">Lessons</div>
+                                </div>
+                                <div class="text-white">
+                                    <%=Math.floor(Math.random() * 6) + 15 %>
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-puzzle"></div>
+                                    <div class="ml-10">Quizzes</div>
+                                </div>
+                                <div class="text-white">
+                                    <%=Math.floor(Math.random() * 8) + 3; %>
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-clock-2"></div>
+                                    <div class="ml-10">Duration</div>
+                                </div>
+                                <div class="text-white">
+                                    <%=Math.floor(Math.random() * 6) + 10; %>
+                                    Hours
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-bar-chart-2"></div>
+                                    <div class="ml-10">Skill level</div>
+                                </div>
+                                <div class="text-white"><%=course.level%></div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-translate"></div>
+                                    <div class="ml-10">Language</div>
+                                </div>
+                                <div class="text-white">English</div>
+                            </div>
+
+                            <div
+                                class="d-flex justify-between py-8 border-bottom-light-2"
+                            >
+                                <div class="d-flex items-center text-white">
+                                    <div class="icon-infinity"></div>
+                                    <div class="ml-10">
+                                        Full lifetime access
+                                    </div>
+                                </div>
+                                <div class="text-white">Yes</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-30">
+                            <a
+                                href="https://www.facebook.com/profile.php?id=100047967413515"
+                                class="d-flex justify-center items-center size-40 rounded-full text-dark-3"
+                            >
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a
+                                href="https://github.com/tmhuyy"
+                                class="d-flex justify-center items-center size-40 rounded-full text-dark-3"
+                            >
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/huy-tran-25230a26b/"
+                                class="d-flex justify-center items-center size-40 rounded-full text-dark-3"
+                            >
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="relative">
+                            <img
+                                class="w-1/1"
+                                src="/img/misc/1.png"
+                                alt="image"
+                            />
+                            <div
+                                class="absolute-full-center d-flex justify-center items-center"
+                            >
+                                <a
+                                    href="https://www.youtube.com/watch?v=gvkqT_Uoahw"
+                                    class="d-flex justify-center items-center size-60 rounded-full bg-white js-gallery"
+                                    data-gallery="gallery1"
+                                >
+                                    <div class="icon-play text-18"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-30">
+                            <div class="d-flex justify-between items-center">
+                                <div class="text-24 lh-1 text-white fw-500">
+                                    $<%=course.price%>
+                                </div>
+                                <div class="lh-1 line-through text-dark-3">
+                                    $100
+                                </div>
+                            </div>
+
+                            <div class="row x-gap-30 y-gap-20 pt-30">
+                                <div class="col-sm-6"></div>
+                                <div class="col-sm-6">
+                                    <% if (isBought) { %>
+                                    <button
+                                        class="button -md -purple-1 text-white w-1/1"
+                                    >
+                                        Learn Now
+                                    </button>
+                                    <% } else {%>
+                                    <a href="/buy/<%=course._id%>">
+                                        <button
+                                            class="button -md -purple-1 text-white w-1/1"
+                                        >
+                                            Buy Now
+                                        </button>
+                                    </a>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="layout-pt-lg layout-pb-md">
+        <div class="container">
+            <div class="tabs -side js-tabs">
+                <div class="row y-gap-40">
+                    <div class="col-lg-4">
+                        <div class="tabs__controls y-gap-5 js-tabs-controls">
+                            <div>
+                                <button
+                                    class="tabs__button text-18 fw-500 js-tabs-button is-active"
+                                    data-tab-target=".-tab-item-1"
+                                    type="button"
+                                >
+                                    Overview
+                                </button>
+                            </div>
+
+                            <div>
+                                <button
+                                    class="tabs__button text-18 fw-500 js-tabs-button"
+                                    data-tab-target=".-tab-item-2"
+                                    type="button"
+                                >
+                                    Course Content
+                                </button>
+                            </div>
+
+                            <div>
+                                <button
+                                    class="tabs__button text-18 fw-500 js-tabs-button"
+                                    data-tab-target=".-tab-item-4"
+                                    type="button"
+                                >
+                                    Review
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="tabs__content js-tabs-content">
+                            <div class="tabs__pane -tab-item-1 is-active">
+                                <h4 class="text-20 fw-500">Description</h4>
+
+                                <div class="show-more mt-30 js-show-more">
+                                    <div class="show-more__content">
+                                        <p class="">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Facilis necessitatibus eos molestias
+                                            illo dignissimos ea ex atque
+                                            sapiente voluptatum. Maxime nam
+                                            nisi, ipsum quae laudantium autem
+                                            vel iste unde. Eos.
+                                            <br /><br />
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Vel
+                                            cupiditate nesciunt dolorem officia
+                                            illum perferendis ducimus, dicta
+                                            laborum. Harum id porro, expedita ab
+                                            unde minima reiciendis incidunt
+                                            neque? Assumenda, delectus!
+                                            <br /><br />
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Id
+                                            optio omnis mollitia quod, molestiae
+                                            dolore corrupti repellat a, eligendi
+                                            explicabo commodi rerum molestias
+                                            itaque animi iure. Illo voluptatum
+                                            provident incidunt!
+                                        </p>
+                                    </div>
+
+                                    <button
+                                        class="show-more__button text-purple-1 fw-500 underline mt-30"
+                                    >
+                                        Show more
+                                    </button>
+                                </div>
+
+                                <div class="mt-60">
+                                    <h4 class="text-20 fw-500 mb-30">
+                                        What you'll learn
+                                    </h4>
+                                    <div class="row x-gap-100 justfiy-between">
+                                        <div class="col-md-6">
+                                            <div class="y-gap-20">
+                                                <% for( let index = 0; index <
+                                                6; index++ ) { %>
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="d-flex justify-center items-center border-light rounded-full size-20 mr-10"
+                                                    >
+                                                        <i
+                                                            class="size-12"
+                                                            data-feather="check"
+                                                        ></i>
+                                                    </div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit,
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                    </p>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="y-gap-20">
+                                                <% for( let index = 0; index <
+                                                6; index++ ) { %>
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="d-flex justify-center items-center border-light rounded-full size-20 mr-10"
+                                                    >
+                                                        <i
+                                                            class="size-12"
+                                                            data-feather="check"
+                                                        ></i>
+                                                    </div>
+                                                    <p>
+                                                        Aliquam hic atque
+                                                        commodi doloribus ab
+                                                        tempora odio
+                                                    </p>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-60">
+                                    <h4 class="text-20 fw-500">Requirements</h4>
+                                    <ul class="ul-list y-gap-15 pt-30">
+                                        <li>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Eligendi, quam aliquam aspernatur
+                                            pariatur vero rerum.
+                                        </li>
+                                        <li>
+                                            No previous experience is needed.
+                                        </li>
+                                        <li>
+                                            No previous ABC skills are needed.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tabs__pane -tab-item-2">
+                                <h2 class="text-20 fw-500">Course Content</h2>
+
+                                <div
+                                    class="d-flex justify-between items-center mt-30"
+                                >
+                                    <div class="">
+                                        27 sections • 95 lectures
+                                    </div>
+                                    <a href="#" class="underline text-purple-1"
+                                        >Expand All Sections</a
+                                    >
+                                </div>
+
+                                <div class="mt-10">
+                                    <div
+                                        class="accordion -block-2 text-left js-accordion"
+                                    >
+                                        <div class="accordion__item">
+                                            <div
+                                                class="accordion__button py-20 px-30 bg-light-4"
+                                            >
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="accordion__icon"
+                                                    >
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-down"
+                                                        ></div>
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-up"
+                                                        ></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-17 fw-500 text-dark-1"
+                                                        >Course Content</span
+                                                    >
+                                                </div>
+
+                                                <div>5 lectures • 87 min</div>
+                                            </div>
+
+                                            <div class="accordion__content">
+                                                <div
+                                                    class="accordion__content__inner px-30 py-30"
+                                                >
+                                                    <div class="y-gap-20">
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Introduction
+                                                                    to the User
+                                                                    Experience
+                                                                    Course
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Getting
+                                                                    started with
+                                                                    your Adobe
+                                                                    XD project
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    What is UI
+                                                                    vs UX - User
+                                                                    Interface vs
+                                                                    User
+                                                                    Experience
+                                                                    vs Product
+                                                                    Designer
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Wireframing
+                                                                    (low
+                                                                    fidelity) in
+                                                                    Adobe XD
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Viewing your
+                                                                    prototype on
+                                                                    a mobile
+                                                                    device
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Sharing your
+                                                                    design
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item">
+                                            <div
+                                                class="accordion__button py-20 px-30 bg-light-4"
+                                            >
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="accordion__icon"
+                                                    >
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-down"
+                                                        ></div>
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-up"
+                                                        ></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-17 fw-500 text-dark-1"
+                                                        >The Brief</span
+                                                    >
+                                                </div>
+
+                                                <div>5 lectures • 87 min</div>
+                                            </div>
+
+                                            <div class="accordion__content">
+                                                <div
+                                                    class="accordion__content__inner px-30 py-30"
+                                                >
+                                                    <div class="y-gap-20">
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Introduction
+                                                                    to the User
+                                                                    Experience
+                                                                    Course
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Getting
+                                                                    started with
+                                                                    your Adobe
+                                                                    XD project
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    What is UI
+                                                                    vs UX - User
+                                                                    Interface vs
+                                                                    User
+                                                                    Experience
+                                                                    vs Product
+                                                                    Designer
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Wireframing
+                                                                    (low
+                                                                    fidelity) in
+                                                                    Adobe XD
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Viewing your
+                                                                    prototype on
+                                                                    a mobile
+                                                                    device
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Sharing your
+                                                                    design
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item">
+                                            <div
+                                                class="accordion__button py-20 px-30 bg-light-4"
+                                            >
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="accordion__icon"
+                                                    >
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-down"
+                                                        ></div>
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-up"
+                                                        ></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-17 fw-500 text-dark-1"
+                                                        >Type, Color &amp; Icon
+                                                        Introduction</span
+                                                    >
+                                                </div>
+
+                                                <div>5 lectures • 87 min</div>
+                                            </div>
+
+                                            <div class="accordion__content">
+                                                <div
+                                                    class="accordion__content__inner px-30 py-30"
+                                                >
+                                                    <div class="y-gap-20">
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Introduction
+                                                                    to the User
+                                                                    Experience
+                                                                    Course
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Getting
+                                                                    started with
+                                                                    your Adobe
+                                                                    XD project
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    What is UI
+                                                                    vs UX - User
+                                                                    Interface vs
+                                                                    User
+                                                                    Experience
+                                                                    vs Product
+                                                                    Designer
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Wireframing
+                                                                    (low
+                                                                    fidelity) in
+                                                                    Adobe XD
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Viewing your
+                                                                    prototype on
+                                                                    a mobile
+                                                                    device
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Sharing your
+                                                                    design
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item">
+                                            <div
+                                                class="accordion__button py-20 px-30 bg-light-4"
+                                            >
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="accordion__icon"
+                                                    >
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-down"
+                                                        ></div>
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-up"
+                                                        ></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-17 fw-500 text-dark-1"
+                                                        >Prototyping a App -
+                                                        Introduction</span
+                                                    >
+                                                </div>
+
+                                                <div>5 lectures • 87 min</div>
+                                            </div>
+
+                                            <div class="accordion__content">
+                                                <div
+                                                    class="accordion__content__inner px-30 py-30"
+                                                >
+                                                    <div class="y-gap-20">
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Introduction
+                                                                    to the User
+                                                                    Experience
+                                                                    Course
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Getting
+                                                                    started with
+                                                                    your Adobe
+                                                                    XD project
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    What is UI
+                                                                    vs UX - User
+                                                                    Interface vs
+                                                                    User
+                                                                    Experience
+                                                                    vs Product
+                                                                    Designer
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Wireframing
+                                                                    (low
+                                                                    fidelity) in
+                                                                    Adobe XD
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Viewing your
+                                                                    prototype on
+                                                                    a mobile
+                                                                    device
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Sharing your
+                                                                    design
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item">
+                                            <div
+                                                class="accordion__button py-20 px-30 bg-light-4"
+                                            >
+                                                <div
+                                                    class="d-flex items-center"
+                                                >
+                                                    <div
+                                                        class="accordion__icon"
+                                                    >
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-down"
+                                                        ></div>
+                                                        <div
+                                                            class="icon"
+                                                            data-feather="chevron-up"
+                                                        ></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-17 fw-500 text-dark-1"
+                                                        >Wireframe
+                                                        Feedback</span
+                                                    >
+                                                </div>
+
+                                                <div>5 lectures • 87 min</div>
+                                            </div>
+
+                                            <div class="accordion__content">
+                                                <div
+                                                    class="accordion__content__inner px-30 py-30"
+                                                >
+                                                    <div class="y-gap-20">
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Introduction
+                                                                    to the User
+                                                                    Experience
+                                                                    Course
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Getting
+                                                                    started with
+                                                                    your Adobe
+                                                                    XD project
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    What is UI
+                                                                    vs UX - User
+                                                                    Interface vs
+                                                                    User
+                                                                    Experience
+                                                                    vs Product
+                                                                    Designer
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Wireframing
+                                                                    (low
+                                                                    fidelity) in
+                                                                    Adobe XD
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Viewing your
+                                                                    prototype on
+                                                                    a mobile
+                                                                    device
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="d-flex justify-between"
+                                                        >
+                                                            <div
+                                                                class="d-flex items-center"
+                                                            >
+                                                                <div
+                                                                    class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10"
+                                                                >
+                                                                    <div
+                                                                        class="icon-play text-9"
+                                                                    ></div>
+                                                                </div>
+                                                                <div>
+                                                                    Sharing your
+                                                                    design
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex x-gap-20 items-center"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >Preview</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >5
+                                                                    question</a
+                                                                >
+                                                                <a
+                                                                    href="#"
+                                                                    class="text-14 lh-1 text-purple-1 underline"
+                                                                    >03:56</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabs__pane -tab-item-4">
+                                <div class="blogPost -comments">
+                                    <div class="blogPost__content">
+                                        <h2
+                                            class="text-20 fw-500 mt-60 lg:mt-40"
+                                        >
+                                            Reviews
+                                        </h2>
+                                        <ul class="comments__list mt-30">
+                                            <li class="comments__item">
+                                                <div
+                                                    class="comments__item-inner md:direction-column"
+                                                >
+                                                    <div
+                                                        class="comments__img mr-20"
+                                                    >
+                                                        <div
+                                                            class="bg-image rounded-full js-lazy"
+                                                            data-bg="img/avatars/1.png"
+                                                        ></div>
+                                                    </div>
+
+                                                    <div
+                                                        class="comments__body md:mt-15"
+                                                    >
+                                                        <div
+                                                            class="comments__header"
+                                                        >
+                                                            <h4
+                                                                class="text-17 fw-500 lh-15"
+                                                            >
+                                                                Lore
+                                                                <span
+                                                                    class="text-13 text-light-1 fw-400"
+                                                                    >3 Days
+                                                                    ago</span
+                                                                >
+                                                            </h4>
+
+                                                            <div
+                                                                class="stars"
+                                                            ></div>
+                                                        </div>
+
+                                                        <h5
+                                                            class="text-15 fw-500 mt-15"
+                                                        >
+                                                            The best LMS Design
+                                                        </h5>
+                                                        <div
+                                                            class="comments__text mt-10"
+                                                        >
+                                                            <p>
+                                                                This course is a
+                                                                very applicable.
+                                                                Professor Ng
+                                                                explains
+                                                                precisely each
+                                                                algorithm and
+                                                                even tries to
+                                                                give an
+                                                                intuition for
+                                                                mathematical and
+                                                                statistic
+                                                                concepts behind
+                                                                each algorithm.
+                                                                Thank you very
+                                                                much.
+                                                            </p>
+                                                        </div>
+
+                                                        <div
+                                                            class="comments__helpful mt-20"
+                                                        >
+                                                            <span
+                                                                class="text-13 text-purple-1"
+                                                                >Was this review
+                                                                helpful?</span
+                                                            >
+                                                            <button
+                                                                class="button text-13 -sm -purple-1 text-white"
+                                                            >
+                                                                Yes
+                                                            </button>
+                                                            <button
+                                                                class="button text-13 -sm -light-7 text-purple-1"
+                                                            >
+                                                                No
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="comments__item">
+                                                <div
+                                                    class="comments__item-inner md:direction-column"
+                                                >
+                                                    <div
+                                                        class="comments__img mr-20"
+                                                    >
+                                                        <div
+                                                            class="bg-image rounded-full js-lazy"
+                                                            data-bg="img/avatars/1.png"
+                                                        ></div>
+                                                    </div>
+
+                                                    <div
+                                                        class="comments__body md:mt-15"
+                                                    >
+                                                        <div
+                                                            class="comments__header"
+                                                        >
+                                                            <h4
+                                                                class="text-17 fw-500 lh-15"
+                                                            >
+                                                                Lorem
+                                                                <span
+                                                                    class="text-13 text-light-1 fw-400"
+                                                                    >3 Days
+                                                                    ago</span
+                                                                >
+                                                            </h4>
+
+                                                            <div
+                                                                class="stars"
+                                                            ></div>
+                                                        </div>
+
+                                                        <h5
+                                                            class="text-15 fw-500 mt-15"
+                                                        >
+                                                            The best LMS Design
+                                                        </h5>
+                                                        <div
+                                                            class="comments__text mt-10"
+                                                        >
+                                                            <p>
+                                                                This course is a
+                                                                very applicable.
+                                                                Professor Ng
+                                                                explains
+                                                                precisely each
+                                                                algorithm and
+                                                                even tries to
+                                                                give an
+                                                                intuition for
+                                                                mathematical and
+                                                                statistic
+                                                                concepts behind
+                                                                each algorithm.
+                                                                Thank you very
+                                                                much.
+                                                            </p>
+                                                        </div>
+
+                                                        <div
+                                                            class="comments__helpful mt-20"
+                                                        >
+                                                            <span
+                                                                class="text-13 text-purple-1"
+                                                                >Was this review
+                                                                helpful?</span
+                                                            >
+                                                            <button
+                                                                class="button text-13 -sm -purple-1 text-white"
+                                                            >
+                                                                Yes
+                                                            </button>
+                                                            <button
+                                                                class="button text-13 -sm -light-7 text-purple-1"
+                                                            >
+                                                                No
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="comments__item">
+                                                <div
+                                                    class="d-flex justify-center"
+                                                >
+                                                    <button
+                                                        class="text-purple-1 lh-12 underline fw-500"
+                                                    >
+                                                        View All Reviews
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

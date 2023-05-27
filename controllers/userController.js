@@ -17,6 +17,7 @@ module.exports.registerUser = async (req, res) => {
     }
 };
 
+
 module.exports.renderLoginForm = (req, res) => {
     res.render("login");
 };
@@ -26,9 +27,9 @@ module.exports.login = async (req, res) => {
     const user = await User.findAndValidate(username, password);
     if (user) {
         req.session.user = user;
-        req.flash("success", "Welcome back to Eduboard");
+        req.flash("success", "Welcome back to UILearn");
         const redirectUrl = req.session.returnTo || "/";
-        res.redirect(redirectUrl);
+        res.redirect("/")
     } else {
         req.flash("error", "Password or Username is wrong");
         res.redirect("/login");

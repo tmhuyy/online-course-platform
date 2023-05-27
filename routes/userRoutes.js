@@ -3,7 +3,7 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const { validateUser } = require("../utils/validateModel");
 const catchAsync = require("../utils/catchAsync");
-
+const isLoggedIn = require("../utils/isLoggedIn");
 router
     .route("/register")
     .get(userController.renderRegisterForm)
@@ -13,6 +13,7 @@ router
     .route("/login")
     .get(userController.renderLoginForm)
     .post(userController.login);
+
 
 router.post("/logout", userController.logout);
 
